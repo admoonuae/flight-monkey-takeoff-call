@@ -112,44 +112,32 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right Content - Traveler Image */}
+            {/* Right Content - Bali Image */}
             <div className="relative flex justify-center items-center">
-              {/* Main traveler illustration */}
+              {/* Main Bali image container */}
               <div className="relative z-10">
                 <div className="w-80 h-96 bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-400 rounded-full relative overflow-hidden shadow-2xl">
-                  {/* Traveler silhouette */}
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-                    <div className="relative">
-                      {/* Backpack */}
-                      <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-16 h-20 bg-teal-600 rounded-lg shadow-lg">
-                        <div className="absolute top-2 left-2 right-2 h-3 bg-teal-700 rounded"></div>
-                        <div className="absolute bottom-2 left-2 right-2 h-2 bg-teal-800 rounded"></div>
-                      </div>
-                      
-                      {/* Person */}
-                      <div className="w-24 h-32 bg-yellow-600 rounded-t-full relative">
-                        {/* Head */}
-                        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-orange-300 rounded-full"></div>
-                        {/* Hair bun */}
-                        <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 translate-x-2 w-4 h-4 bg-orange-400 rounded-full"></div>
-                        {/* Arms */}
-                        <div className="absolute top-8 -left-4 w-6 h-12 bg-yellow-600 rounded transform -rotate-12"></div>
-                        <div className="absolute top-8 -right-4 w-6 h-12 bg-yellow-600 rounded transform rotate-12"></div>
-                      </div>
-                      
-                      {/* Suitcase */}
-                      <div className="absolute -bottom-4 -right-8 w-12 h-16 bg-orange-600 rounded shadow-lg">
-                        <div className="absolute top-1 left-1 right-1 h-2 bg-orange-700 rounded"></div>
-                        <div className="absolute top-4 left-2 right-2 h-1 bg-orange-800 rounded"></div>
-                        <div className="absolute bottom-2 left-2 w-2 h-2 bg-gray-800 rounded-full"></div>
-                        <div className="absolute bottom-2 right-2 w-2 h-2 bg-gray-800 rounded-full"></div>
-                      </div>
+                  {/* Beautiful Bali landscape image */}
+                  <img 
+                    src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Beautiful Bali landscape with temple and mountains"
+                    className="w-full h-full object-cover"
+                  />
+                  
+                  {/* Overlay gradient for better text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                  
+                  {/* Bali text overlay */}
+                  <div className="absolute bottom-6 left-6 right-6 text-center">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg">
+                      <h3 className="text-xl font-bold text-gray-800">Discover Bali</h3>
+                      <p className="text-sm text-gray-600">Paradise awaits you</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating elements around traveler */}
+              {/* Floating elements around Bali image */}
               <div className="absolute top-10 -left-10 animate-bounce">
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
                   <Plane className="w-6 h-6 text-white" />
