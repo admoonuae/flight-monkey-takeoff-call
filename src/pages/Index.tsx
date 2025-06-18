@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Phone, Clock, Shield, Users, Plane, MapPin, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -64,6 +65,81 @@ const Index = () => {
           </Button>
         </div>
       </header>
+
+      {/* Popular Locations Section - Modular Layout */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content - Left Side */}
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                  Popular Locations
+                </h2>
+                <p className="text-xl text-gray-600 mb-6">
+                  Discover amazing destinations across the United States. From bustling cities to scenic coastlines, find your perfect getaway.
+                </p>
+                <p className="text-lg text-gray-700 mb-8">
+                  Our travel experts have curated the most sought-after destinations that offer unforgettable experiences. Whether you're looking for adventure, relaxation, or cultural immersion, these locations have something special waiting for you.
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-gray-700">Hand-picked destinations by travel experts</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span className="text-gray-700">Best deals on flights and accommodations</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <span className="text-gray-700">24/7 support for your travel needs</span>
+                </div>
+              </div>
+
+              <Button 
+                onClick={handleCallClick}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                Plan Your Trip - Call 1-800-FLIGHT
+              </Button>
+            </div>
+
+            {/* Carousel - Right Side */}
+            <div className="relative">
+              <Carousel
+                plugins={[
+                  Autoplay({
+                    delay: 6000,
+                  })
+                ]}
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-4">
+                  {popularLocations.map((location, index) => (
+                    <CarouselItem key={index} className="pl-4 md:basis-1/2">
+                      <LocationCard
+                        image={location.image}
+                        title={location.title}
+                        description={location.description}
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+              </Carousel>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Creative Hero Section with Traveler */}
       <section className="relative overflow-hidden bg-gradient-to-br from-orange-100 via-yellow-50 to-blue-100 min-h-[700px]">
