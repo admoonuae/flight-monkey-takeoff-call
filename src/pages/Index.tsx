@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import LocationCard from '@/components/LocationCard';
+import Autoplay from 'embla-carousel-autoplay';
 
 const Index = () => {
   const handleCallClick = () => {
@@ -231,6 +232,11 @@ const Index = () => {
 
           <div className="relative max-w-6xl mx-auto">
             <Carousel
+              plugins={[
+                Autoplay({
+                  delay: 6000,
+                })
+              ]}
               opts={{
                 align: "start",
                 loop: true,
