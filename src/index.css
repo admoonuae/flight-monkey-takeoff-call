@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -100,4 +101,67 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom animations for travel header */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fly-across {
+  0% {
+    transform: translateX(-100px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fly-across-reverse {
+  0% {
+    transform: translateX(100px) rotate(-12deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px) rotate(-12deg);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 6s ease-in-out infinite 2s;
+}
+
+.animate-fly-across {
+  animation: fly-across 15s linear infinite;
+}
+
+.animate-fly-across-reverse {
+  animation: fly-across-reverse 20s linear infinite;
 }

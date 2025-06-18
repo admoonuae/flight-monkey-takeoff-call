@@ -29,89 +29,169 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Enhanced Hero Section with Travel Background */}
-      <section className="relative overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2600&q=80")',
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/70 to-purple-900/80"></div>
-        </div>
-
-        {/* Floating Airplane Graphics */}
-        <div className="absolute top-20 left-10 opacity-20">
-          <Plane className="w-16 h-16 text-white transform rotate-45" />
-        </div>
-        <div className="absolute top-40 right-20 opacity-15">
-          <Plane className="w-12 h-12 text-white transform -rotate-12" />
-        </div>
-        <div className="absolute bottom-32 left-1/4 opacity-10">
-          <Plane className="w-20 h-20 text-white transform rotate-12" />
-        </div>
-
-        {/* Content */}
-        <div className="relative container mx-auto px-4 py-20 text-center text-white">
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-8">
-              <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-sm font-semibold mb-4 border border-white/30">
-                ✈️ Trusted by 50,000+ Happy Travelers
-              </span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Book Your Perfect Flight in
-              <span className="text-yellow-300 block">Under 5 Minutes!</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-              Skip the endless searching! Our expert travel agents find you the best deals on flights and hotels. 
-              Save time, money, and stress with our 24/7 personal service.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button 
-                onClick={handleCallClick}
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-6 text-xl rounded-full font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse border-2 border-orange-300"
-              >
-                <Phone className="w-6 h-6 mr-3" />
-                Call 1-800-FLIGHT Now
-              </Button>
-              <div className="text-center">
-                <p className="text-sm opacity-75">📞 Average wait time: Under 30 seconds</p>
-                <p className="text-xs opacity-60">Available 24/7 • No hidden fees</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/20">
-                <div className="text-3xl font-bold text-yellow-300">$127</div>
-                <div className="text-sm opacity-90">Average Savings</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/20">
-                <div className="text-3xl font-bold text-green-300">24/7</div>
-                <div className="text-sm opacity-90">Support Available</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/20">
-                <div className="text-3xl font-bold text-blue-300">2min</div>
-                <div className="text-sm opacity-90">Booking Time</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/20">
-                <div className="text-3xl font-bold text-orange-300">Free</div>
-                <div className="text-sm opacity-90">Cancellation</div>
-              </div>
-            </div>
+      {/* Creative Hero Section with Traveler */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-orange-100 via-yellow-50 to-blue-100 min-h-[700px]">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          {/* Floating clouds */}
+          <div className="absolute top-20 left-10 w-20 h-12 bg-white/60 rounded-full animate-float"></div>
+          <div className="absolute top-32 right-20 w-16 h-10 bg-white/50 rounded-full animate-float-delayed"></div>
+          <div className="absolute top-48 left-1/4 w-24 h-14 bg-white/40 rounded-full animate-float"></div>
+          
+          {/* Flying airplanes */}
+          <div className="absolute top-16 left-1/3 opacity-30 animate-fly-across">
+            <Plane className="w-8 h-8 text-blue-500 transform rotate-45" />
+          </div>
+          <div className="absolute top-40 right-1/3 opacity-25 animate-fly-across-reverse">
+            <Plane className="w-6 h-6 text-orange-500 transform -rotate-12" />
+          </div>
+          <div className="absolute bottom-40 left-1/5 opacity-20 animate-float">
+            <Plane className="w-10 h-10 text-purple-500 transform rotate-12" />
           </div>
         </div>
 
-        {/* Traveler Silhouette */}
-        <div className="absolute bottom-0 right-10 opacity-30 hidden lg:block">
-          <div className="w-32 h-40 bg-white/20 rounded-t-full relative">
-            <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white/30 rounded-full"></div>
-            <div className="absolute top-8 right-2 w-8 h-12 bg-white/25 rounded transform rotate-12"></div>
+        <div className="container mx-auto px-4 py-16 relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-8 z-10">
+              <div className="space-y-4">
+                <div className="inline-block bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                  ✈️ Best Destinations Around The World
+                </div>
+                
+                <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+                  <span className="text-gray-900">Travel, </span>
+                  <span className="text-orange-500 relative">
+                    enjoy
+                    <div className="absolute -bottom-2 left-0 w-full h-1 bg-orange-300 rounded-full"></div>
+                  </span>
+                  <br />
+                  <span className="text-gray-900">and live a new</span>
+                  <br />
+                  <span className="text-gray-900">and </span>
+                  <span className="text-blue-600 font-black">full life</span>
+                </h1>
+                
+                <p className="text-xl text-gray-600 max-w-lg leading-relaxed">
+                  Skip the endless searching! Our expert travel agents find you the best deals on flights and hotels. 
+                  Save time, money, and stress with our 24/7 personal service.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={handleCallClick}
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg rounded-full font-bold shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <Phone className="w-5 h-5 mr-3" />
+                  Call 1-800-FLIGHT Now
+                </Button>
+                
+                <Button 
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-6 text-lg rounded-full font-semibold transition-all duration-300"
+                >
+                  <div className="w-5 h-5 mr-3 bg-orange-500 rounded-full flex items-center justify-center">
+                    <div className="w-0 h-0 border-l-[6px] border-l-white border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent ml-0.5"></div>
+                  </div>
+                  Watch Demo
+                </Button>
+              </div>
+
+              <div className="flex items-center space-x-6 text-sm text-gray-600">
+                <div className="flex items-center space-x-1">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>24/7 Support Available</span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>Average wait: 30 seconds</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content - Traveler Image */}
+            <div className="relative flex justify-center items-center">
+              {/* Main traveler illustration */}
+              <div className="relative z-10">
+                <div className="w-80 h-96 bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-400 rounded-full relative overflow-hidden shadow-2xl">
+                  {/* Traveler silhouette */}
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+                    <div className="relative">
+                      {/* Backpack */}
+                      <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-16 h-20 bg-teal-600 rounded-lg shadow-lg">
+                        <div className="absolute top-2 left-2 right-2 h-3 bg-teal-700 rounded"></div>
+                        <div className="absolute bottom-2 left-2 right-2 h-2 bg-teal-800 rounded"></div>
+                      </div>
+                      
+                      {/* Person */}
+                      <div className="w-24 h-32 bg-yellow-600 rounded-t-full relative">
+                        {/* Head */}
+                        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-orange-300 rounded-full"></div>
+                        {/* Hair bun */}
+                        <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 translate-x-2 w-4 h-4 bg-orange-400 rounded-full"></div>
+                        {/* Arms */}
+                        <div className="absolute top-8 -left-4 w-6 h-12 bg-yellow-600 rounded transform -rotate-12"></div>
+                        <div className="absolute top-8 -right-4 w-6 h-12 bg-yellow-600 rounded transform rotate-12"></div>
+                      </div>
+                      
+                      {/* Suitcase */}
+                      <div className="absolute -bottom-4 -right-8 w-12 h-16 bg-orange-600 rounded shadow-lg">
+                        <div className="absolute top-1 left-1 right-1 h-2 bg-orange-700 rounded"></div>
+                        <div className="absolute top-4 left-2 right-2 h-1 bg-orange-800 rounded"></div>
+                        <div className="absolute bottom-2 left-2 w-2 h-2 bg-gray-800 rounded-full"></div>
+                        <div className="absolute bottom-2 right-2 w-2 h-2 bg-gray-800 rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating elements around traveler */}
+              <div className="absolute top-10 -left-10 animate-bounce">
+                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                  <Plane className="w-6 h-6 text-white" />
+                </div>
+              </div>
+              
+              <div className="absolute top-20 -right-8 animate-bounce" style={{ animationDelay: '0.5s' }}>
+                <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                  <MapPin className="w-5 h-5 text-white" />
+                </div>
+              </div>
+              
+              <div className="absolute bottom-20 -left-8 animate-bounce" style={{ animationDelay: '1s' }}>
+                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center shadow-lg">
+                  <Star className="w-4 h-4 text-white" />
+                </div>
+              </div>
+
+              {/* Decorative path lines */}
+              <div className="absolute top-32 left-20 w-32 h-1 bg-gradient-to-r from-transparent via-blue-300 to-transparent rounded opacity-50"></div>
+              <div className="absolute bottom-32 right-16 w-24 h-1 bg-gradient-to-r from-transparent via-orange-300 to-transparent rounded opacity-50"></div>
+            </div>
+          </div>
+
+          {/* Stats cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border border-white/20">
+              <div className="text-3xl font-bold text-orange-600">$127</div>
+              <div className="text-sm text-gray-600">Average Savings</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border border-white/20">
+              <div className="text-3xl font-bold text-green-600">24/7</div>
+              <div className="text-sm text-gray-600">Support Available</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border border-white/20">
+              <div className="text-3xl font-bold text-blue-600">2min</div>
+              <div className="text-sm text-gray-600">Booking Time</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border border-white/20">
+              <div className="text-3xl font-bold text-purple-600">Free</div>
+              <div className="text-sm text-gray-600">Cancellation</div>
+            </div>
           </div>
         </div>
       </section>
