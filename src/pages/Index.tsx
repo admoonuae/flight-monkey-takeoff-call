@@ -2,11 +2,46 @@ import React from 'react';
 import { Phone, Clock, Shield, Users, Plane, MapPin, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import LocationCard from '@/components/LocationCard';
 
 const Index = () => {
   const handleCallClick = () => {
     window.location.href = 'tel:+1-800-FLIGHT';
   };
+
+  const popularLocations = [
+    {
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "New York City",
+      description: "The city that never sleeps, featuring iconic landmarks like Times Square, Central Park, and the Statue of Liberty."
+    },
+    {
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "San Francisco",
+      description: "Famous for the Golden Gate Bridge, Alcatraz Island, and charming cable cars through hilly streets."
+    },
+    {
+      image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Miami",
+      description: "Vibrant beaches, Art Deco architecture, and exciting nightlife in the heart of South Beach."
+    },
+    {
+      image: "https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Las Vegas",
+      description: "Entertainment capital with world-class shows, casinos, and unforgettable dining experiences."
+    },
+    {
+      image: "https://images.unsplash.com/photo-1434873740857-1bc5653afda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Chicago",
+      description: "Architectural marvels, deep-dish pizza, and beautiful lakefront views along Lake Michigan."
+    },
+    {
+      image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Los Angeles",
+      description: "Hollywood glamour, beautiful beaches, and perfect weather year-round in the City of Angels."
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
@@ -180,6 +215,52 @@ const Index = () => {
               <div className="text-3xl font-bold text-purple-600">Free</div>
               <div className="text-sm text-gray-600">Cancellation</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Locations Carousel */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Popular Locations
+            </h2>
+            <p className="text-xl text-gray-600">Discover amazing destinations across the United States</p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {popularLocations.map((location, index) => (
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <LocationCard
+                      image={location.image}
+                      title={location.title}
+                      description={location.description}
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
+          </div>
+
+          <div className="text-center mt-8">
+            <Button 
+              onClick={handleCallClick}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              Book Your Dream Destination - Call 1-800-FLIGHT
+            </Button>
           </div>
         </div>
       </section>
