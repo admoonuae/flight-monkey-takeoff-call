@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Clock, Shield, Users, Plane, MapPin, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -30,54 +29,89 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 text-center">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              🎯 Trusted by 50,000+ Happy Travelers
-            </span>
-          </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Book Your Perfect Flight in
-            <span className="text-blue-600 block">Under 5 Minutes!</span>
-          </h1>
-          
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Skip the endless searching! Our expert travel agents find you the best deals on flights and hotels. 
-            Save time, money, and stress with our 24/7 personal service.
-          </p>
+      {/* Enhanced Hero Section with Travel Background */}
+      <section className="relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2600&q=80")',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/70 to-purple-900/80"></div>
+        </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              onClick={handleCallClick}
-              size="lg"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg rounded-full font-bold shadow-xl transform hover:scale-105 transition-all duration-300 animate-pulse"
-            >
-              <Phone className="w-5 h-5 mr-3" />
-              Call 1-800-FLIGHT Now
-            </Button>
-            <p className="text-sm text-gray-500">📞 Average wait time: Under 30 seconds</p>
-          </div>
+        {/* Floating Airplane Graphics */}
+        <div className="absolute top-20 left-10 opacity-20">
+          <Plane className="w-16 h-16 text-white transform rotate-45" />
+        </div>
+        <div className="absolute top-40 right-20 opacity-15">
+          <Plane className="w-12 h-12 text-white transform -rotate-12" />
+        </div>
+        <div className="absolute bottom-32 left-1/4 opacity-10">
+          <Plane className="w-20 h-20 text-white transform rotate-12" />
+        </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="text-2xl font-bold text-blue-600">$127</div>
-              <div className="text-sm text-gray-600">Average Savings</div>
+        {/* Content */}
+        <div className="relative container mx-auto px-4 py-20 text-center text-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-8">
+              <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-sm font-semibold mb-4 border border-white/30">
+                ✈️ Trusted by 50,000+ Happy Travelers
+              </span>
             </div>
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="text-2xl font-bold text-green-600">24/7</div>
-              <div className="text-sm text-gray-600">Support Available</div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              Book Your Perfect Flight in
+              <span className="text-yellow-300 block">Under 5 Minutes!</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+              Skip the endless searching! Our expert travel agents find you the best deals on flights and hotels. 
+              Save time, money, and stress with our 24/7 personal service.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <Button 
+                onClick={handleCallClick}
+                size="lg"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-6 text-xl rounded-full font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse border-2 border-orange-300"
+              >
+                <Phone className="w-6 h-6 mr-3" />
+                Call 1-800-FLIGHT Now
+              </Button>
+              <div className="text-center">
+                <p className="text-sm opacity-75">📞 Average wait time: Under 30 seconds</p>
+                <p className="text-xs opacity-60">Available 24/7 • No hidden fees</p>
+              </div>
             </div>
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="text-2xl font-bold text-purple-600">2min</div>
-              <div className="text-sm text-gray-600">Booking Time</div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/20">
+                <div className="text-3xl font-bold text-yellow-300">$127</div>
+                <div className="text-sm opacity-90">Average Savings</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/20">
+                <div className="text-3xl font-bold text-green-300">24/7</div>
+                <div className="text-sm opacity-90">Support Available</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/20">
+                <div className="text-3xl font-bold text-blue-300">2min</div>
+                <div className="text-sm opacity-90">Booking Time</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/20">
+                <div className="text-3xl font-bold text-orange-300">Free</div>
+                <div className="text-sm opacity-90">Cancellation</div>
+              </div>
             </div>
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="text-2xl font-bold text-orange-600">Free</div>
-              <div className="text-sm text-gray-600">Cancellation</div>
-            </div>
+          </div>
+        </div>
+
+        {/* Traveler Silhouette */}
+        <div className="absolute bottom-0 right-10 opacity-30 hidden lg:block">
+          <div className="w-32 h-40 bg-white/20 rounded-t-full relative">
+            <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white/30 rounded-full"></div>
+            <div className="absolute top-8 right-2 w-8 h-12 bg-white/25 rounded transform rotate-12"></div>
           </div>
         </div>
       </section>
