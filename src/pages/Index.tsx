@@ -16,23 +16,28 @@ const Index = () => {
       image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       title: "New York City",
       description: "The city that never sleeps, featuring iconic landmarks like Times Square, Central Park, and the Statue of Liberty."
-    }, {
+    },
+    {
       image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       title: "San Francisco",
       description: "Famous for the Golden Gate Bridge, Alcatraz Island, and charming cable cars through hilly streets."
-    }, {
+    },
+    {
       image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       title: "Miami",
       description: "Vibrant beaches, Art Deco architecture, and exciting nightlife in the heart of South Beach."
-    }, {
+    },
+    {
       image: "https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       title: "Las Vegas",
       description: "Entertainment capital with world-class shows, casinos, and unforgettable dining experiences."
-    }, {
+    },
+    {
       image: "https://images.unsplash.com/photo-1434873740857-1bc5653afda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       title: "Chicago",
       description: "Architectural marvels, deep-dish pizza, and beautiful lakefront views along Lake Michigan."
-    }, {
+    },
+    {
       image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       title: "Los Angeles",
       description: "Hollywood glamour, beautiful beaches, and perfect weather year-round in the City of Angels."
@@ -50,7 +55,10 @@ const Index = () => {
             </div>
             <h1 className="text-2xl font-bold text-gray-800">Flight Monkey</h1>
           </div>
-          <Button onClick={handleCallClick} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-all duration-200">
+          <Button 
+            onClick={handleCallClick}
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-all duration-200"
+          >
             <Phone className="w-4 h-4 mr-2" />
             Call Now: 1-800-FLIGHT
           </Button>
@@ -106,10 +114,25 @@ const Index = () => {
                 </p>
               </div>
 
-              <div>
-                <Button onClick={handleCallClick} size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg rounded-full font-bold shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={handleCallClick}
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg rounded-full font-bold shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
                   <Phone className="w-5 h-5 mr-3" />
                   Call 1-800-FLIGHT Now
+                </Button>
+                
+                <Button 
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-6 text-lg rounded-full font-semibold transition-all duration-300"
+                >
+                  <div className="w-5 h-5 mr-3 bg-orange-500 rounded-full flex items-center justify-center">
+                    <div className="w-0 h-0 border-l-[6px] border-l-white border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent ml-0.5"></div>
+                  </div>
+                  Watch Demo
                 </Button>
               </div>
 
@@ -131,7 +154,11 @@ const Index = () => {
               <div className="relative z-10">
                 <div className="w-96 h-[500px] bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-400 rounded-3xl relative overflow-hidden shadow-2xl">
                   {/* Beautiful Bali temple surrounded by lush tropical landscape image */}
-                  <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Beautiful Bali temple surrounded by lush tropical landscape" className="w-full h-full object-cover" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="Beautiful Bali temple surrounded by lush tropical landscape"
+                    className="w-full h-full object-cover"
+                  />
                   
                   {/* Overlay gradient for better text readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
@@ -153,17 +180,13 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="absolute top-20 -right-8 animate-bounce" style={{
-              animationDelay: '0.5s'
-            }}>
+              <div className="absolute top-20 -right-8 animate-bounce" style={{ animationDelay: '0.5s' }}>
                 <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
               </div>
               
-              <div className="absolute bottom-20 -left-8 animate-bounce" style={{
-              animationDelay: '1s'
-            }}>
+              <div className="absolute bottom-20 -left-8 animate-bounce" style={{ animationDelay: '1s' }}>
                 <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center shadow-lg">
                   <Star className="w-4 h-4 text-white" />
                 </div>
@@ -177,7 +200,10 @@ const Index = () => {
 
           {/* Stats cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto">
-            
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border border-white/20">
+              <div className="text-3xl font-bold text-orange-600">$127</div>
+              <div className="text-sm text-gray-600">Average Savings</div>
+            </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border border-white/20">
               <div className="text-3xl font-bold text-green-600">24/7</div>
               <div className="text-sm text-gray-600">Support Available</div>
@@ -205,16 +231,28 @@ const Index = () => {
           </div>
 
           <div className="relative max-w-6xl mx-auto">
-            <Carousel plugins={[Autoplay({
-            delay: 6000
-          })]} opts={{
-            align: "start",
-            loop: true
-          }} className="w-full">
+            <Carousel
+              plugins={[
+                Autoplay({
+                  delay: 6000,
+                })
+              ]}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
               <CarouselContent className="-ml-4">
-                {popularLocations.map((location, index) => <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                    <LocationCard image={location.image} title={location.title} description={location.description} />
-                  </CarouselItem>)}
+                {popularLocations.map((location, index) => (
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <LocationCard
+                      image={location.image}
+                      title={location.title}
+                      description={location.description}
+                    />
+                  </CarouselItem>
+                ))}
               </CarouselContent>
               <CarouselPrevious className="hidden md:flex" />
               <CarouselNext className="hidden md:flex" />
@@ -222,7 +260,10 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Button onClick={handleCallClick} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold">
+            <Button 
+              onClick={handleCallClick}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold"
+            >
               <Phone className="w-4 h-4 mr-2" />
               Book Your Dream Destination - Call 1-800-FLIGHT
             </Button>
@@ -291,7 +332,11 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <Button onClick={handleCallClick} size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full font-bold shadow-xl transform hover:scale-105 transition-all duration-300">
+            <Button 
+              onClick={handleCallClick}
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full font-bold shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
               <Phone className="w-5 h-5 mr-3" />
               Get Your Best Deal Now - Call 1-800-FLIGHT
             </Button>
@@ -307,7 +352,9 @@ const Index = () => {
               What Our Customers Say
             </h2>
             <div className="flex justify-center items-center space-x-1 mb-4">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />)}
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+              ))}
               <span className="ml-2 text-gray-600 font-semibold">4.9/5 from 3,247 reviews</span>
             </div>
           </div>
@@ -316,7 +363,9 @@ const Index = () => {
             <Card className="p-6">
               <CardContent className="pt-0">
                 <div className="flex items-center space-x-1 mb-3">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
                 <p className="text-gray-700 mb-4">
                   "Saved me $240 on my family vacation to Orlando! The agent was so helpful and found us a perfect flight time. Will definitely use again!"
@@ -328,7 +377,9 @@ const Index = () => {
             <Card className="p-6">
               <CardContent className="pt-0">
                 <div className="flex items-center space-x-1 mb-3">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
                 <p className="text-gray-700 mb-4">
                   "Had to change my business trip last minute. Called at 11 PM and they handled everything in 5 minutes. Incredible service!"
@@ -340,7 +391,9 @@ const Index = () => {
             <Card className="p-6">
               <CardContent className="pt-0">
                 <div className="flex items-center space-x-1 mb-3">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
                 <p className="text-gray-700 mb-4">
                   "I hate booking flights online. These guys made it so easy - just one call and everything was taken care of. Worth every penny!"
@@ -406,7 +459,11 @@ const Index = () => {
             <div className="text-sm opacity-75">Available 24/7 • Average wait time: 30 seconds</div>
           </div>
 
-          <Button onClick={handleCallClick} size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-xl rounded-full font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 mb-4">
+          <Button 
+            onClick={handleCallClick}
+            size="lg"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-xl rounded-full font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 mb-4"
+          >
             <Phone className="w-6 h-6 mr-3" />
             Call Now for Instant Savings
           </Button>
