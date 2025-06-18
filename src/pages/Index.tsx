@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Phone, Clock, Shield, Users, Plane, MapPin, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import LocationCard from '@/components/LocationCard';
 import Autoplay from 'embla-carousel-autoplay';
@@ -347,67 +347,79 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section - Split Grid Layout */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why 50,000+ Travelers Choose Flight Monkey
             </h2>
             <p className="text-xl text-gray-600">We don't just book flights - we create hassle-free travel experiences</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="pt-6">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">24/7 Expert Support</h3>
-                <p className="text-gray-600 mb-4">
+          <div className="space-y-16">
+            {/* First Column - Photo Left, Text Right */}
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="order-1">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="24/7 Expert Support"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+              <div className="order-2 space-y-4">
+                <h3 className="text-2xl font-bold text-gray-900">24/7 Expert Support</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
                   Real human agents available around the clock. No chatbots, no waiting - just instant, personalized help when you need it.
                 </p>
-                <div className="flex items-center justify-center text-green-600 font-semibold">
-                  <CheckCircle className="w-4 h-4 mr-2" />
+                <Badge variant="secondary" className="bg-green-100 text-green-800 px-4 py-2">
                   Always Available
-                </div>
-              </CardContent>
-            </Card>
+                </Badge>
+              </div>
+            </div>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="pt-6">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Hassle-Free Changes</h3>
-                <p className="text-gray-600 mb-4">
+            {/* Second Column - Text Left, Photo Right */}
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1 space-y-4">
+                <h3 className="text-2xl font-bold text-gray-900">Hassle-Free Changes</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
                   Need to change or cancel? We handle everything for you. No confusing airline policies, no hidden fees - just simple solutions.
                 </p>
-                <div className="flex items-center justify-center text-green-600 font-semibold">
-                  <CheckCircle className="w-4 h-4 mr-2" />
+                <Badge variant="secondary" className="bg-blue-100 text-blue-800 px-4 py-2">
                   Zero Stress Guarantee
-                </div>
-              </CardContent>
-            </Card>
+                </Badge>
+              </div>
+              <div className="order-1 lg:order-2">
+                <img 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Hassle-Free Changes"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+            </div>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="pt-6">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Best Price Promise</h3>
-                <p className="text-gray-600 mb-4">
+            {/* Third Column - Photo Left, Text Right */}
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="order-1">
+                <img 
+                  src="https://images.unsplash.com/photo-1469041797191-50ace28483c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Best Price Promise"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+              <div className="order-2 space-y-4">
+                <h3 className="text-2xl font-bold text-gray-900">Best Price Promise</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
                   Our agents search hundreds of airlines to find you the absolute best deals. If you find cheaper, we'll beat it by $50.
                 </p>
-                <div className="flex items-center justify-center text-green-600 font-semibold">
-                  <CheckCircle className="w-4 h-4 mr-2" />
+                <Badge variant="secondary" className="bg-orange-100 text-orange-800 px-4 py-2">
                   Price Match + $50
-                </div>
-              </CardContent>
-            </Card>
+                </Badge>
+              </div>
+            </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center mt-16">
             <Button 
               onClick={handleCallClick}
               size="lg"
