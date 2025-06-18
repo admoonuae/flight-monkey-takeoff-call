@@ -5,36 +5,42 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import LocationCard from '@/components/LocationCard';
 import Autoplay from 'embla-carousel-autoplay';
+
 const Index = () => {
   const handleCallClick = () => {
     window.location.href = 'tel:+1-800-FLIGHT';
   };
-  const popularLocations = [{
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    title: "New York City",
-    description: "The city that never sleeps, featuring iconic landmarks like Times Square, Central Park, and the Statue of Liberty."
-  }, {
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    title: "San Francisco",
-    description: "Famous for the Golden Gate Bridge, Alcatraz Island, and charming cable cars through hilly streets."
-  }, {
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    title: "Miami",
-    description: "Vibrant beaches, Art Deco architecture, and exciting nightlife in the heart of South Beach."
-  }, {
-    image: "https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    title: "Las Vegas",
-    description: "Entertainment capital with world-class shows, casinos, and unforgettable dining experiences."
-  }, {
-    image: "https://images.unsplash.com/photo-1434873740857-1bc5653afda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    title: "Chicago",
-    description: "Architectural marvels, deep-dish pizza, and beautiful lakefront views along Lake Michigan."
-  }, {
-    image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    title: "Los Angeles",
-    description: "Hollywood glamour, beautiful beaches, and perfect weather year-round in the City of Angels."
-  }];
-  return <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+
+  const popularLocations = [
+    {
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "New York City",
+      description: "The city that never sleeps, featuring iconic landmarks like Times Square, Central Park, and the Statue of Liberty."
+    }, {
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "San Francisco",
+      description: "Famous for the Golden Gate Bridge, Alcatraz Island, and charming cable cars through hilly streets."
+    }, {
+      image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Miami",
+      description: "Vibrant beaches, Art Deco architecture, and exciting nightlife in the heart of South Beach."
+    }, {
+      image: "https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Las Vegas",
+      description: "Entertainment capital with world-class shows, casinos, and unforgettable dining experiences."
+    }, {
+      image: "https://images.unsplash.com/photo-1434873740857-1bc5653afda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Chicago",
+      description: "Architectural marvels, deep-dish pizza, and beautiful lakefront views along Lake Michigan."
+    }, {
+      image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Los Angeles",
+      description: "Hollywood glamour, beautiful beaches, and perfect weather year-round in the City of Angels."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -100,17 +106,10 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div>
                 <Button onClick={handleCallClick} size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg rounded-full font-bold shadow-xl transform hover:scale-105 transition-all duration-300">
                   <Phone className="w-5 h-5 mr-3" />
                   Call 1-800-FLIGHT Now
-                </Button>
-                
-                <Button variant="outline" size="lg" className="border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-6 text-lg rounded-full font-semibold transition-all duration-300">
-                  <div className="w-5 h-5 mr-3 bg-orange-500 rounded-full flex items-center justify-center">
-                    <div className="w-0 h-0 border-l-[6px] border-l-white border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent ml-0.5"></div>
-                  </div>
-                  Watch Demo
                 </Button>
               </div>
 
@@ -440,6 +439,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
