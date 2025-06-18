@@ -116,22 +116,22 @@ const Index = () => {
             <div className="relative flex justify-center items-center">
               {/* Main Bali image container */}
               <div className="relative z-10">
-                <div className="w-80 h-96 bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-400 rounded-full relative overflow-hidden shadow-2xl">
-                  {/* Beautiful Bali landscape image */}
+                <div className="w-96 h-[500px] bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-400 rounded-3xl relative overflow-hidden shadow-2xl">
+                  {/* Beautiful Bali temple surrounded by lush tropical landscape image */}
                   <img 
-                    src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Beautiful Bali landscape with temple and mountains"
+                    src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="Beautiful Bali temple surrounded by lush tropical landscape"
                     className="w-full h-full object-cover"
                   />
                   
                   {/* Overlay gradient for better text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                   
                   {/* Bali text overlay */}
-                  <div className="absolute bottom-6 left-6 right-6 text-center">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg">
-                      <h3 className="text-xl font-bold text-gray-800">Discover Bali</h3>
-                      <p className="text-sm text-gray-600">Paradise awaits you</p>
+                  <div className="absolute bottom-8 left-8 right-8 text-center">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg">
+                      <h3 className="text-2xl font-bold text-gray-800">Discover Bali</h3>
+                      <p className="text-base text-gray-600">Paradise awaits you</p>
                     </div>
                   </div>
                 </div>
