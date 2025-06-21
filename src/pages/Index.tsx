@@ -24,7 +24,7 @@ const Index = () => {
       description: "Famous for the Golden Gate Bridge, Alcatraz Island, and charming cable cars through hilly streets."
     },
     {
-      image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       title: "Miami",
       description: "Vibrant beaches, Art Deco architecture, and exciting nightlife in the heart of South Beach."
     },
