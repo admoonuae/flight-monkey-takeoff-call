@@ -14,34 +14,24 @@ const Index = () => {
 
   const popularLocations = [
     {
+      image: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Mexico City",
+      description: "Rich history, vibrant culture, and incredible cuisine in Mexico's bustling capital city."
+    },
+    {
+      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Cancun",
+      description: "Pristine beaches, crystal clear waters, and world-class resorts on the Caribbean coast."
+    },
+    {
       image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "New York City",
-      description: "The city that never sleeps, featuring iconic landmarks like Times Square, Central Park, and the Statue of Liberty."
+      title: "Tulum",
+      description: "Ancient Mayan ruins overlooking turquoise waters and bohemian beachside charm."
     },
     {
-      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "San Francisco",
-      description: "Famous for the Golden Gate Bridge, Alcatraz Island, and charming cable cars through hilly streets."
-    },
-    {
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "Miami",
-      description: "Vibrant beaches, Art Deco architecture, and exciting nightlife in the heart of South Beach."
-    },
-    {
-      image: "https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "Las Vegas",
-      description: "Entertainment capital with world-class shows, casinos, and unforgettable dining experiences."
-    },
-    {
-      image: "https://images.unsplash.com/photo-1434873740857-1bc5653afda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "Chicago",
-      description: "Architectural marvels, deep-dish pizza, and beautiful lakefront views along Lake Michigan."
-    },
-    {
-      image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "Los Angeles",
-      description: "Hollywood glamour, beautiful beaches, and perfect weather year-round in the City of Angels."
+      image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Oaxaca",
+      description: "Colonial architecture, indigenous culture, and renowned culinary traditions in southern Mexico."
     }
   ];
 
@@ -77,10 +67,10 @@ const Index = () => {
                   Popular Locations
                 </h2>
                 <p className="text-xl text-gray-600 mb-6">
-                  Discover amazing destinations across the United States. From bustling cities to scenic coastlines, find your perfect getaway.
+                  Discover amazing destinations across Mexico. From bustling cities to pristine beaches, find your perfect getaway.
                 </p>
                 <p className="text-lg text-gray-700 mb-8">
-                  Our travel experts have curated the most sought-after destinations that offer unforgettable experiences. Whether you're looking for adventure, relaxation, or cultural immersion, these locations have something special waiting for you.
+                  Our travel experts have curated the most sought-after Mexican destinations that offer unforgettable experiences. Whether you're looking for adventure, relaxation, or cultural immersion, these locations have something special waiting for you.
                 </p>
               </div>
               
@@ -168,7 +158,7 @@ const Index = () => {
             <div className="space-y-8 z-10">
               <div className="space-y-4">
                 <div className="inline-block bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-                  ✈️ Best Destinations Around The World
+                  ✈️ Best Destinations Around Mexico
                 </div>
                 
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
@@ -224,32 +214,32 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right Content - Bali Image */}
+            {/* Right Content - Mexico City Image */}
             <div className="relative flex justify-center items-center">
-              {/* Main Bali image container */}
+              {/* Main Mexico City image container */}
               <div className="relative z-10">
                 <div className="w-96 h-[500px] bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-400 rounded-3xl relative overflow-hidden shadow-2xl">
-                  {/* Beautiful Bali temple surrounded by lush tropical landscape image */}
+                  {/* Beautiful Mexico City image */}
                   <img 
-                    src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                    alt="Beautiful Bali temple surrounded by lush tropical landscape"
+                    src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="Beautiful Mexico City skyline and architecture"
                     className="w-full h-full object-cover"
                   />
                   
                   {/* Overlay gradient for better text readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                   
-                  {/* Bali text overlay */}
+                  {/* Mexico City text overlay */}
                   <div className="absolute bottom-8 left-8 right-8 text-center">
                     <div className="bg-white/95 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg">
-                      <h3 className="text-2xl font-bold text-gray-800">Discover Bali</h3>
-                      <p className="text-base text-gray-600">Paradise awaits you</p>
+                      <h3 className="text-2xl font-bold text-gray-800">Discover Mexico</h3>
+                      <p className="text-base text-gray-600">Culture awaits you</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating elements around Bali image */}
+              {/* Floating elements around Mexico City image */}
               <div className="absolute top-10 -left-10 animate-bounce">
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
                   <Plane className="w-6 h-6 text-white" />
@@ -303,7 +293,7 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Popular Locations
             </h2>
-            <p className="text-xl text-gray-600">Discover amazing destinations across the United States</p>
+            <p className="text-xl text-gray-600">Discover amazing destinations across Mexico</p>
           </div>
 
           <div className="relative max-w-6xl mx-auto">
