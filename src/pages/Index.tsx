@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Phone, Clock, Shield, Users, Plane, MapPin, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -352,7 +353,7 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="order-1">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="24/7 Expert Support"
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
                 />
@@ -381,7 +382,7 @@ const Index = () => {
               </div>
               <div className="order-1 lg:order-2">
                 <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Hassle-Free Changes"
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
                 />
@@ -392,7 +393,7 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="order-1">
                 <img 
-                  src="https://images.unsplash.com/photo-1469041797191-50ace28483c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Best Price Promise"
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
                 />
