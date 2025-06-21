@@ -353,7 +353,7 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="order-1">
                 <img 
-                  src="https://images.unsplash.com/photo-1553028826-f4804a6dfd3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="24/7 Expert Support"
                   className="w-full h-64 object-cover rounded-2xl shadow-lg"
                 />
