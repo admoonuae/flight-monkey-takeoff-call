@@ -10,7 +10,7 @@ import Autoplay from 'embla-carousel-autoplay';
 
 const Index = () => {
   const handleCallClick = () => {
-    window.location.href = 'tel:+1-800-FLIGHT';
+    window.location.href = 'tel:+528008017795';
   };
 
   const popularLocations = [
@@ -52,7 +52,7 @@ const Index = () => {
             className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-all duration-200"
           >
             <Phone className="w-4 h-4 mr-2" />
-            Call Now: 1-800-FLIGHT
+            Call Now: +52 800 801 7795
           </Button>
         </div>
       </header>
@@ -95,7 +95,7 @@ const Index = () => {
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold"
               >
                 <Phone className="w-4 h-4 mr-2" />
-                Plan Your Trip - Call 1-800-FLIGHT
+                Plan Your Trip - Call +52 800 801 7795
               </Button>
             </div>
 
@@ -188,7 +188,7 @@ const Index = () => {
                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg rounded-full font-bold shadow-xl transform hover:scale-105 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5 mr-3" />
-                  Call 1-800-FLIGHT Now
+                  Call +52 800 801 7795 Now
                 </Button>
                 
                 <Button 
@@ -332,7 +332,7 @@ const Index = () => {
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold"
             >
               <Phone className="w-4 h-4 mr-2" />
-              Book Your Dream Destination - Call 1-800-FLIGHT
+              Book Your Dream Destination - Call +52 800 801 7795
             </Button>
           </div>
         </div>
@@ -417,7 +417,7 @@ const Index = () => {
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full font-bold shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               <Phone className="w-5 h-5 mr-3" />
-              Get Your Best Deal Now - Call 1-800-FLIGHT
+              Get Your Best Deal Now - Call +52 800 801 7795
             </Button>
           </div>
         </div>
@@ -533,8 +533,8 @@ const Index = () => {
           </p>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto mb-8">
-            <div className="text-6xl font-bold mb-2">1-800-FLIGHT</div>
-            <div className="text-xl mb-4">(1-800-354-4478)</div>
+            <div className="text-6xl font-bold mb-2">+52 800 801 7795</div>
+            <div className="text-xl mb-4">Mexico Toll-Free</div>
             <div className="text-sm opacity-75">Available 24/7 • Average wait time: 30 seconds</div>
           </div>
 
@@ -565,7 +565,7 @@ const Index = () => {
             </div>
             
             <div className="text-center md:text-right">
-              <div className="text-2xl font-bold mb-1">1-800-FLIGHT</div>
+              <div className="text-2xl font-bold mb-1">+52 800 801 7795</div>
               <div className="text-sm text-gray-400">Licensed Travel Agency • IATA Certified</div>
             </div>
           </div>
