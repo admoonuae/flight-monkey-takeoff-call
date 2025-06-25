@@ -1,14 +1,18 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Clock, Shield, Users, Plane, MapPin, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import LocationCard from '@/components/LocationCard';
 import Autoplay from 'embla-carousel-autoplay';
 
 const Index = () => {
+  const [privacyOpen, setPrivacyOpen] = useState(false);
+  const [termsOpen, setTermsOpen] = useState(false);
+
   const handleCallClick = () => {
     window.location.href = 'tel:+528008017795';
   };
@@ -576,6 +580,123 @@ const Index = () => {
               <p>7900 N Stadium Drive</p>
               <p>Houston, TX 77030</p>
             </div>
+            
+            {/* Privacy Policy and Terms Links */}
+            <div className="mb-4 space-x-6">
+              <Dialog open={privacyOpen} onOpenChange={setPrivacyOpen}>
+                <DialogTrigger asChild>
+                  <button className="text-blue-400 hover:text-blue-300 underline">
+                    Privacy Policy
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle>Privacy Policy</DialogTitle>
+                  </DialogHeader>
+                  <div className="text-sm text-gray-700 space-y-4">
+                    <p>At Flight Monkey, we are committed to protecting the privacy and security of our users' personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you use our tour booking service.</p>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Information Collection:</h3>
+                      <p>We may collect personal information such as your name, contact details, payment information, and travel preferences when you make a booking or interact with our website. Additionally, we may gather data automatically, including your IP address, browser type, and browsing patterns.</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Use of Information:</h3>
+                      <p>We use the information we collect to process bookings, personalize your experience, communicate with you, and improve our services. Your data may also be used for marketing purposes, such as sending promotional offers or newsletters, but you can opt out at any time.</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Data Sharing:</h3>
+                      <p>We may share your personal information with third-party service providers, such as tour operators or payment processors, to facilitate your bookings. However, we do not sell or rent your data to third parties for their marketing purposes.</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Data Security:</h3>
+                      <p>We employ industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is completely secure, so we cannot guarantee absolute security.</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Cookies and Tracking Technologies:</h3>
+                      <p>Our website may use cookies and other tracking technologies to enhance your browsing experience and gather information about how you interact with our site. You can adjust your browser settings to reject cookies, but this may affect some functionalities.</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Children's Privacy:</h3>
+                      <p>Our services are not directed at individuals under the age of 18, and we do not knowingly collect personal information from minors. If you believe we have unintentionally collected data from a child, please contact us immediately.</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Updates to Privacy Policy:</h3>
+                      <p>We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. We encourage you to review this page regularly for any updates.</p>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+
+              <Dialog open={termsOpen} onOpenChange={setTermsOpen}>
+                <DialogTrigger asChild>
+                  <button className="text-blue-400 hover:text-blue-300 underline">
+                    Terms and Conditions
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle>Terms and Conditions</DialogTitle>
+                  </DialogHeader>
+                  <div className="text-sm text-gray-700 space-y-4">
+                    <p>Welcome to Flight Monkey! These terms and conditions outline the rules and regulations for the use of our tour booking service.</p>
+                    
+                    <p>By accessing this website and using our services, you accept these terms and conditions in full. If you disagree with any part of these terms and conditions, you must not use our website or services.</p>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">1. Booking and Payment:</h3>
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li>By making a booking through My Voyage Verse, you agree to abide by the terms and conditions set forth by the tour operator.</li>
+                        <li>Payments must be made in full at the time of booking, unless otherwise specified.</li>
+                        <li>Prices are subject to change without notice and may vary depending on availability, seasonality, and other factors.</li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">2. Cancellation and Refunds:</h3>
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li>Cancellation policies vary depending on the tour operator and may incur fees.</li>
+                        <li>Refunds, if applicable, will be processed according to the cancellation policy of the tour operator.</li>
+                        <li>My Voyage Verse is not responsible for any charges or fees incurred due to cancellations or changes made by the customer.</li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">3. Travel Documents and Requirements:</h3>
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li>It is the customer's responsibility to ensure they have the necessary travel documents, including passports, visas, and vaccinations, prior to departure.</li>
+                        <li>My Voyage Verse is not liable for any expenses or losses incurred due to inadequate travel documentation.</li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">4. Limitation of Liability:</h3>
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li>My Voyage Verse acts solely as an intermediary between customers and tour operators and is not responsible for the actions or omissions of third-party providers.</li>
+                        <li>We do not guarantee the accuracy, completeness, or reliability of information provided by tour operators.</li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">5. Intellectual Property:</h3>
+                      <p>All content and materials on the My Voyage Verse website, including text, graphics, logos, and images, are the property of My Voyage Verse and protected by copyright laws.</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">6. Governing Law:</h3>
+                      <p>These terms and conditions are governed by and construed in accordance with the laws, and any disputes arising from the use of our services shall be subject to the exclusive jurisdiction of the courts.</p>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </div>
+            
             <p>&copy; 2024 Flight Monkey. All rights reserved. Your trusted travel partner since 2018.</p>
           </div>
         </div>
