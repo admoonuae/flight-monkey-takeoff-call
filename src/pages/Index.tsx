@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Phone, Clock, Shield, Users, Plane, MapPin, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -193,17 +192,6 @@ const Index = () => {
                 >
                   <Phone className="w-5 h-5 mr-3" />
                   Call +52 800 801 7795 Now
-                </Button>
-                
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-6 text-lg rounded-full font-semibold transition-all duration-300"
-                >
-                  <div className="w-5 h-5 mr-3 bg-orange-500 rounded-full flex items-center justify-center">
-                    <div className="w-0 h-0 border-l-[6px] border-l-white border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent ml-0.5"></div>
-                  </div>
-                  Watch Demo
                 </Button>
               </div>
 
