@@ -571,6 +571,11 @@ const Index = () => {
           </div>
           
           <div className="border-t border-gray-800 mt-6 pt-6 text-center text-sm text-gray-400">
+            <div className="mb-2">
+              <p className="font-semibold text-white">Flight Monkey llc</p>
+              <p>7900 N Stadium Drive</p>
+              <p>Houston, TX 77030</p>
+            </div>
             <p>&copy; 2024 Flight Monkey. All rights reserved. Your trusted travel partner since 2018.</p>
           </div>
         </div>
