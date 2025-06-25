@@ -426,7 +426,7 @@ const Index = () => {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
               ))}
-              <span className="ml-2 text-gray-600 font-semibold">4.9/5 from 3,247 reviews</span>
+              <span className="ml-2 text-gray-600 font-semibold">4.9/5</span>
             </div>
           </div>
 
