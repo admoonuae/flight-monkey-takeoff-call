@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Phone, Clock, Shield, Users, Plane, MapPin, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -7,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import LocationCard from '@/components/LocationCard';
+import Logo from '@/components/Logo';
 import Autoplay from 'embla-carousel-autoplay';
 
 const Index = () => {
@@ -45,12 +45,7 @@ const Index = () => {
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="flex items-center space-x-2">
-            <div className="bg-blue-600 text-white p-2 rounded-lg">
-              <Plane className="w-6 h-6" />
-            </div>
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Flight Monkey</h1>
-          </div>
+          <Logo />
           <Button 
             onClick={handleCallClick}
             className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-2 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto"
@@ -339,7 +334,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Por Qué Más de 50,000 Viajeros Eligen Flight Monkey
+              Por Qué Más de 50,000 Viajeros Eligen Reserva Mi Reservas
             </h2>
             <p className="text-lg sm:text-xl text-gray-600">No solo reservamos vuelos - creamos experiencias de viaje sin complicaciones</p>
           </div>
@@ -526,7 +521,7 @@ const Index = () => {
             ¿Listo para Ahorrar Tiempo y Dinero en tu Próximo Vuelo?
           </h2>
           <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90">
-            Únete a miles de viajeros inteligentes que confían en Flight Monkey para reservas sin complicaciones
+            Únete a miles de viajeros inteligentes que confían en Reserva Mi Reservas para reservas sin complicaciones
           </p>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto mb-6 sm:mb-8">
@@ -555,12 +550,7 @@ const Index = () => {
       <footer className="bg-gray-900 text-white py-6 sm:py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="bg-blue-600 text-white p-2 rounded-lg">
-                <Plane className="w-6 h-6" />
-              </div>
-              <span className="text-xl font-bold">Flight Monkey</span>
-            </div>
+            <Logo className="mb-4 md:mb-0" />
             
             <div className="text-center md:text-right">
               <div className="text-xl sm:text-2xl font-bold mb-1">+52 800 801 7795</div>
@@ -570,12 +560,11 @@ const Index = () => {
           
           <div className="border-t border-gray-800 mt-4 sm:mt-6 pt-4 sm:pt-6 text-center text-xs sm:text-sm text-gray-400">
             <div className="mb-2">
-              <p className="font-semibold text-white">Flight Monkey llc</p>
+              <p className="font-semibold text-white">Reserva Mi Reservas LLC</p>
               <p>7900 N Stadium Drive</p>
               <p>Houston, TX 77030</p>
             </div>
             
-            {/* Privacy Policy and Terms Links */}
             <div className="mb-4 space-x-4 sm:space-x-6">
               <Dialog open={privacyOpen} onOpenChange={setPrivacyOpen}>
                 <DialogTrigger asChild>
@@ -691,7 +680,7 @@ const Index = () => {
               </Dialog>
             </div>
             
-            <p>&copy; 2024 Flight Monkey. Todos los derechos reservados. Tu socio de viajes de confianza desde 2018.</p>
+            <p>&copy; 2024 Reserva Mi Reservas. Todos los derechos reservados. Tu socio de viajes de confianza desde 2018.</p>
           </div>
         </div>
       </footer>
