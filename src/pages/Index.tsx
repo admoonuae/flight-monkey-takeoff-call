@@ -7,6 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import LocationCard from '@/components/LocationCard';
 import Logo from '@/components/Logo';
+import ContactPopup from '@/components/ContactPopup';
 import Autoplay from 'embla-carousel-autoplay';
 
 const Index = () => {
@@ -42,6 +43,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+      <ContactPopup />
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
