@@ -16,7 +16,7 @@ const ContactPopup = () => {
   }, []);
 
   const handleCall = () => {
-    window.open('tel:+1234567890', '_self');
+    window.open('tel:+528008017795', '_self');
   };
 
   return (
@@ -63,7 +63,7 @@ const ContactPopup = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3 text-gray-700">
                 <Phone className="w-4 h-4 text-blue-600" />
-                <span className="font-medium">+1 (234) 567-8900</span>
+                <span className="font-medium">+52 800 801 7795</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-700">
                 <span className="w-4 h-4 text-blue-600">📧</span>
@@ -81,7 +81,7 @@ const ContactPopup = () => {
               className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Llamar Ahora +1 (234) 567-8900
+              Llamar Ahora +52 800 801 7795
             </Button>
 
             <p className="text-xs text-gray-500 text-center">
