@@ -18,9 +18,7 @@ const ContactPopup = () => {
   }, []);
 
   const handleCall = () => {
-    if (!isMobile) {
-      window.open('tel:+528008017795', '_self');
-    }
+    window.open('tel:+528008017795', '_self');
   };
 
   return (
