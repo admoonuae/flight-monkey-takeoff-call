@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { X, Phone } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
 import callCenterLady from '@/assets/call-center-lady.jpg';
 
 const ContactPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -16,7 +18,9 @@ const ContactPopup = () => {
   }, []);
 
   const handleCall = () => {
-    window.open('tel:+528008017795', '_self');
+    if (!isMobile) {
+      window.open('tel:+528008017795', '_self');
+    }
   };
 
   return (
