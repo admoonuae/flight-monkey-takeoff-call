@@ -68,12 +68,12 @@ const ContactPopup = () => {
                 <span className="font-medium">+52 800 801 7795</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-700">
-                <span className="w-4 h-4 text-blue-600">📧</span>
-                <span>info@reservamireservas.com</span>
+                <Phone className="w-4 h-4 text-blue-600" />
+                <span className="font-medium">1-800-267-0020 (24/7 USA Toll-free)</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-700">
-                <span className="w-4 h-4 text-blue-600">🕒</span>
-                <span>Lunes - Domingo: 8:00 AM - 10:00 PM</span>
+                <span className="w-4 h-4 text-blue-600">📧</span>
+                <span>info@reservamireservas.com</span>
               </div>
             </div>
 
