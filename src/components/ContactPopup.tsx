@@ -21,6 +21,10 @@ const ContactPopup = () => {
     window.open('tel:+528008017795', '_self');
   };
 
+  const handleUSACall = () => {
+    window.open('tel:+18002670020', '_self');
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="sm:max-w-md bg-white border-0 shadow-2xl p-0 overflow-hidden">
@@ -65,11 +69,15 @@ const ContactPopup = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3 text-gray-700">
                 <Phone className="w-4 h-4 text-blue-600" />
-                <span className="font-medium">+52 800 801 7795</span>
+                <a href="tel:+528008017795" className="font-medium hover:text-blue-600 transition-colors">
+                  +52 800 801 7795
+                </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-700">
                 <Phone className="w-4 h-4 text-blue-600" />
-                <span className="font-medium">1-800-267-0020 (24/7 USA Toll-free)</span>
+                <a href="tel:+18002670020" className="font-medium hover:text-blue-600 transition-colors">
+                  1-800-267-0020 (24/7 USA Toll-free)
+                </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-700">
                 <span className="w-4 h-4 text-blue-600">📧</span>
@@ -77,14 +85,24 @@ const ContactPopup = () => {
               </div>
             </div>
 
-            {/* Call Button */}
-            <Button
-              onClick={handleCall}
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Llamar Ahora +52 800 801 7795
-            </Button>
+            {/* Call Buttons */}
+            <div className="space-y-2">
+              <Button
+                onClick={handleCall}
+                className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Llamar México +52 800 801 7795
+              </Button>
+              
+              <Button
+                onClick={handleUSACall}
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call USA 1-800-267-0020
+              </Button>
+            </div>
 
             <p className="text-xs text-gray-500 text-center">
               ¡Llámanos gratis y planifica tu próxima aventura!
