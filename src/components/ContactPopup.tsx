@@ -25,6 +25,10 @@ const ContactPopup = () => {
     window.open('tel:+18002670020', '_self');
   };
 
+  const handleUKCall = () => {
+    window.open('tel:+448085998705', '_self');
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="sm:max-w-md bg-white border-0 shadow-2xl p-0 overflow-hidden">
@@ -80,6 +84,12 @@ const ContactPopup = () => {
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-700">
+                <Phone className="w-4 h-4 text-blue-600" />
+                <a href="tel:+448085998705" className="font-medium hover:text-blue-600 transition-colors">
+                  +44 808 599 8705 (UK Toll-free)
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-700">
                 <span className="w-4 h-4 text-blue-600">📧</span>
                 <span>info@reservamireservas.com</span>
               </div>
@@ -101,6 +111,14 @@ const ContactPopup = () => {
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call USA 1-800-267-0020
+              </Button>
+              
+              <Button
+                onClick={handleUKCall}
+                className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call UK +44 808 599 8705
               </Button>
             </div>
 
