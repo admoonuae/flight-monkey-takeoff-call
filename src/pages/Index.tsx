@@ -358,7 +358,7 @@ const Index = () => {
                   Agentes humanos reales disponibles las 24 horas. Sin chatbots, sin esperas - solo ayuda instantánea y personalizada cuando la necesites.
                 </p>
                 <p className="text-blue-600 text-base sm:text-lg font-medium">
-                  We're here to assist your bookings, Changes & Cancellations
+                  We're here to assist your Flight bookings, Changes & Cancellations
                 </p>
                 <Badge variant="secondary" className="bg-green-100 text-green-800 px-4 py-2">
                   Siempre Disponible

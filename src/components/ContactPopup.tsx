@@ -53,7 +53,7 @@ const ContactPopup = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">¡Estamos aquí para ayudarte!</h3>
-                <p className="text-blue-100 text-sm">We're here to assist your bookings, Changes & Cancellations</p>
+                <p className="text-blue-100 text-sm">We're here to assist your Flight bookings, Changes & Cancellations</p>
               </div>
             </div>
           </div>
