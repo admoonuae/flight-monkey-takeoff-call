@@ -53,7 +53,7 @@ const ContactPopup = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">¡Estamos aquí para ayudarte!</h3>
-                <p className="text-blue-100 text-sm">Contacta con nuestro equipo de viajes</p>
+                <p className="text-blue-100 text-sm">We're here to assist your bookings, Changes & Cancellations</p>
               </div>
             </div>
           </div>
@@ -88,10 +88,6 @@ const ContactPopup = () => {
                 <a href="tel:+448085998705" className="font-medium hover:text-blue-600 transition-colors">
                   +44 808 599 8705 (UK Toll-free)
                 </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-700">
-                <span className="w-4 h-4 text-blue-600">📧</span>
-                <span>info@reservamireservas.com</span>
               </div>
             </div>
 
