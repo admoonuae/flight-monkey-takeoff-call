@@ -8,6 +8,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import LocationCard from '@/components/LocationCard';
 import Logo from '@/components/Logo';
 import ContactPopup from '@/components/ContactPopup';
+import customerServiceTeam from '@/assets/customer-service-team.jpg';
 import Autoplay from 'embla-carousel-autoplay';
 
 const Index = () => {
@@ -346,7 +347,7 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div className="order-1">
                 <img 
-                  src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src={customerServiceTeam}
                   alt="Soporte Experto 24/7"
                   className="w-full h-48 sm:h-64 object-cover rounded-2xl shadow-lg"
                 />
@@ -355,6 +356,9 @@ const Index = () => {
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Soporte Experto 24/7</h3>
                 <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                   Agentes humanos reales disponibles las 24 horas. Sin chatbots, sin esperas - solo ayuda instantánea y personalizada cuando la necesites.
+                </p>
+                <p className="text-blue-600 text-base sm:text-lg font-medium">
+                  We're here to assist your bookings, Changes & Cancellations
                 </p>
                 <Badge variant="secondary" className="bg-green-100 text-green-800 px-4 py-2">
                   Siempre Disponible
