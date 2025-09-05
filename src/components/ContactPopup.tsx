@@ -72,7 +72,7 @@ const ContactPopup = () => {
           <div className="p-6 space-y-4">
             <div className="text-center">
               <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                Reserva Mi Reservas
+                24/7 Airlines Customer Service
               </h4>
               <p className="text-gray-600 text-sm mb-4">
                 Especialistas en viajes y tours personalizados
