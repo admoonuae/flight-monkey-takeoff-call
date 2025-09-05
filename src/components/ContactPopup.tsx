@@ -39,97 +39,97 @@ const ContactPopup = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md bg-white border-0 shadow-2xl p-0 overflow-hidden">
-        <div className="relative">
+      <DialogContent className="sm:max-w-md bg-gray-50 border-0 shadow-2xl p-0 overflow-hidden">
+        <div className="relative bg-white">
           {/* Close button - hidden on mobile */}
           {!isMobile && (
             <button
               onClick={() => handleClose(false)}
-              className="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white rounded-full p-2 transition-colors"
+              className="absolute top-4 right-4 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors"
             >
               <X className="w-4 h-4 text-gray-600" />
             </button>
           )}
 
-          {/* Header with image */}
-          <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-6 text-white">
-            <div className="flex items-center space-x-4">
-              <div className="flex-shrink-0">
-                <img
-                  src={callCenterLady}
-                  alt="Agente de servicio al cliente"
-                  className="w-20 h-20 rounded-full border-4 border-white/20 object-cover"
-                />
+          {/* Header */}
+          <div className="bg-white p-6 border-b border-gray-100">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">Fly More, Spend Less</h2>
+              <h3 className="text-xl font-semibold text-orange-600 mb-4">Special Flight Offer!</h3>
+              
+              <div className="space-y-3 text-sm text-gray-600 mb-4">
+                <div className="flex items-center justify-center space-x-2">
+                  <div className="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  </div>
+                  <span>Expert guidance by our Travel Expert</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <div className="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  </div>
+                  <span>24 hours cancellation</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <div className="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  </div>
+                  <span>Booking Changes & Cancellation</span>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-bold">¡Estamos aquí para ayudarte!</h3>
-                <p className="text-blue-100 text-sm">We're here to assist your Flight bookings, Changes & Cancellations</p>
-              </div>
+
+              <p className="text-gray-700 font-medium mb-4">We're here to assist your Flight booking</p>
             </div>
           </div>
 
           {/* Content */}
-          <div className="p-6 space-y-4">
-            <div className="text-center">
+          <div className="p-6 bg-gray-50">
+            <div className="text-center mb-4">
               <h4 className="text-lg font-semibold text-gray-800 mb-2">
                 24/7 Airlines Customer Service
               </h4>
-              <p className="text-gray-600 text-sm mb-4">
-                Especialistas en viajes y tours personalizados
-              </p>
-            </div>
-
-            {/* Contact Information */}
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center space-x-3 text-gray-700">
-                <Phone className="w-4 h-4 text-blue-600" />
-                <a href="tel:+528008017795" className="font-medium hover:text-blue-600 transition-colors">
-                  +52 800 801 7795
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-700">
-                <Phone className="w-4 h-4 text-blue-600" />
-                <a href="tel:+18002670020" className="font-medium hover:text-blue-600 transition-colors">
-                  1-800-267-0020 (24/7 USA Toll-free)
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-700">
-                <Phone className="w-4 h-4 text-blue-600" />
-                <a href="tel:+448085998705" className="font-medium hover:text-blue-600 transition-colors">
-                  +44 808 599 8705 (UK Toll-free)
-                </a>
-              </div>
             </div>
 
             {/* Call Buttons */}
-            <div className="space-y-2">
-              <Button
-                onClick={handleCall}
-                className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Llamar México +52 800 801 7795
-              </Button>
-              
+            <div className="space-y-3">
               <Button
                 onClick={handleUSACall}
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 px-6 rounded-full transition-all duration-200 flex items-center justify-center space-x-3"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Call USA 1-800-267-0020
+                <span className="text-lg">🇺🇸</span>
+                <span>+1-800-267-0020</span>
               </Button>
               
               <Button
                 onClick={handleUKCall}
-                className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 px-6 rounded-full transition-all duration-200 flex items-center justify-center space-x-3"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Call UK +44 808 599 8705
+                <span className="text-lg">🇬🇧</span>
+                <span>+44 808 599 8705</span>
+              </Button>
+              
+              <Button
+                onClick={handleCall}
+                className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 px-6 rounded-full transition-all duration-200 flex items-center justify-center space-x-3"
+              >
+                <span className="text-lg">🇲🇽</span>
+                <span>+52 800 801 7795</span>
               </Button>
             </div>
 
-            <p className="text-xs text-gray-500 text-center">
-              ¡Llámanos gratis y planifica tu próxima aventura!
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <p className="text-center text-sm text-gray-600 mb-2">- Local Phone Number -</p>
+              <Button
+                onClick={handleUSACall}
+                className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 px-6 rounded-full transition-all duration-200 flex items-center justify-center space-x-3"
+              >
+                <span className="text-lg">🇺🇸</span>
+                <span>+1 866 985 5678</span>
+              </Button>
+            </div>
+
+            <p className="text-xs text-gray-500 text-center mt-4">
+              Call us for free and plan your next adventure!
             </p>
           </div>
         </div>
