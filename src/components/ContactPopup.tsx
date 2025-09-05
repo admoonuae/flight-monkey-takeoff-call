@@ -117,16 +117,6 @@ const ContactPopup = () => {
               </Button>
             </div>
 
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <p className="text-center text-sm text-gray-600 mb-2">- Local Phone Number -</p>
-              <Button
-                onClick={handleUSACall}
-                className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 px-6 rounded-full transition-all duration-200 flex items-center justify-center space-x-3"
-              >
-                <span className="text-lg">🇺🇸</span>
-                <span>+1 866 985 5678</span>
-              </Button>
-            </div>
 
             <p className="text-xs text-gray-500 text-center mt-4">
               Call us for free and plan your next adventure!
