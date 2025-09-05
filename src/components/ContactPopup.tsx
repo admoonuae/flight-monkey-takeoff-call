@@ -12,7 +12,7 @@ const ContactPopup = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 5000);
+    }, 2000); // Show popup after 2 seconds instead of 5
 
     return () => clearTimeout(timer);
   }, []);
@@ -29,17 +29,27 @@ const ContactPopup = () => {
     window.open('tel:+448085998705', '_self');
   };
 
+  const handleClose = (open: boolean) => {
+    // Prevent closing on mobile devices
+    if (!open && isMobile) {
+      return;
+    }
+    setIsOpen(open);
+  };
+
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-md bg-white border-0 shadow-2xl p-0 overflow-hidden">
         <div className="relative">
-          {/* Close button */}
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white rounded-full p-2 transition-colors"
-          >
-            <X className="w-4 h-4 text-gray-600" />
-          </button>
+          {/* Close button - hidden on mobile */}
+          {!isMobile && (
+            <button
+              onClick={() => handleClose(false)}
+              className="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white rounded-full p-2 transition-colors"
+            >
+              <X className="w-4 h-4 text-gray-600" />
+            </button>
+          )}
 
           {/* Header with image */}
           <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-6 text-white">
