@@ -54,8 +54,8 @@ const ContactPopup = () => {
           {/* Header */}
           <div className="bg-white p-6 border-b border-gray-100">
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-gray-800 mb-2">Fly More, Spend Less</h2>
-              <h3 className="text-xl font-semibold text-orange-600 mb-4">Special Flight Offer!</h3>
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">Book Cheap Flight Tickets Now</h2>
+              <h3 className="text-xl font-semibold text-orange-600 mb-4">Get Discounts Upto 40%</h3>
               
               <div className="space-y-3 text-sm text-gray-600 mb-4">
                 <div className="flex items-center justify-center space-x-2">
