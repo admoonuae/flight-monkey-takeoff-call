@@ -54,9 +54,6 @@ const ContactPopup = () => {
           {/* Header */}
           <div className="bg-white p-6 border-b border-gray-100">
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-gray-800 mb-2">Book Cheap Flight Tickets Now</h2>
-              <h3 className="text-xl font-semibold text-orange-600 mb-4">Get Discounts Upto 40%</h3>
-              
               <div className="space-y-3 text-sm text-gray-600 mb-4">
                 <div className="flex items-center justify-center space-x-2">
                   <div className="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center">
@@ -86,7 +83,7 @@ const ContactPopup = () => {
           <div className="p-6 bg-gray-50">
             <div className="text-center mb-4">
               <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                24/7 Airlines Customer Service
+                24/7 Customer Care Available
               </h4>
             </div>
 
@@ -118,9 +115,6 @@ const ContactPopup = () => {
             </div>
 
 
-            <p className="text-xs text-gray-500 text-center mt-4">
-              Call us for free and plan your next adventure!
-            </p>
           </div>
         </div>
       </DialogContent>
