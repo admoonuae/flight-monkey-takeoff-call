@@ -51,70 +51,82 @@ const ContactPopup = () => {
             </button>
           )}
 
-          {/* Header */}
-          <div className="bg-white p-6 border-b border-gray-100">
-            <div className="text-center">
-              <div className="space-y-3 text-sm text-gray-600 mb-4">
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                  </div>
-                  <span>Expert guidance by our Travel Expert</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                  </div>
-                  <span>24 hours cancellation</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                  </div>
-                  <span>Booking Changes & Cancellation</span>
-                </div>
+          {/* Header with Logo */}
+          <div className="bg-white p-6 text-center">
+            <div className="flex items-center justify-center space-x-2 mb-4">
+              <div className="bg-yellow-400 p-2 rounded">
+                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                </svg>
               </div>
-
-              <p className="text-gray-700 font-medium mb-4">We're here to assist your Flight booking</p>
+              <h2 className="text-2xl font-bold text-gray-800">Flight Express</h2>
             </div>
+            <h3 className="text-lg font-semibold text-gray-700 mb-6">FLIGHT HELP DESK</h3>
+            
+            {/* Customer Service Representative */}
+            <div className="flex justify-center mb-4">
+              <div className="w-32 h-32 rounded-full bg-blue-500 p-1">
+                <img 
+                  src={callCenterLady} 
+                  alt="Customer Service Representative" 
+                  className="w-full h-full rounded-full object-cover"
+                />
+              </div>
+            </div>
+            
+            <p className="text-lg font-semibold text-gray-800 mb-4">No Hold - Calls Answered in 5 Sec</p>
+            
+            {/* Primary Phone Button */}
+            <Button
+              onClick={handleUSACall}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-full text-lg mb-4"
+            >
+              +1-800-267-0020
+            </Button>
+            
+            <p className="text-gray-600 font-medium mb-6">24/7 Reservation Support</p>
           </div>
 
-          {/* Content */}
-          <div className="p-6 bg-gray-50">
-            <div className="text-center mb-4">
-              <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                24/7 Customer Care Available
-              </h4>
+          {/* Service Buttons */}
+          <div className="px-6 pb-4">
+            <div className="grid grid-cols-2 gap-3 mb-4">
+              <button className="bg-gray-800 text-white py-3 px-4 rounded-full text-sm font-medium">
+                Tickets Booking
+              </button>
+              <button className="bg-gray-800 text-white py-3 px-4 rounded-full text-sm font-medium">
+                Changes
+              </button>
+              <button className="bg-gray-800 text-white py-3 px-4 rounded-full text-sm font-medium">
+                Cancellation
+              </button>
+              <button className="bg-gray-800 text-white py-3 px-4 rounded-full text-sm font-medium">
+                Customer Service
+              </button>
             </div>
+            
+            {/* Secondary Phone Button */}
+            <Button
+              onClick={handleUKCall}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-full text-lg mb-4"
+            >
+              +44 808 599 8705
+            </Button>
+          </div>
 
-            {/* Call Buttons */}
-            <div className="space-y-3">
-              <Button
-                onClick={handleUSACall}
-                className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 px-6 rounded-full transition-all duration-200 flex items-center justify-center space-x-3"
-              >
-                <span className="text-lg">🇺🇸</span>
-                <span>+1-800-267-0020</span>
-              </Button>
-              
-              <Button
-                onClick={handleUKCall}
-                className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 px-6 rounded-full transition-all duration-200 flex items-center justify-center space-x-3"
-              >
-                <span className="text-lg">🇬🇧</span>
-                <span>+44 808 599 8705</span>
-              </Button>
-              
+          {/* Bottom Section */}
+          <div className="bg-gray-800 text-white p-4 rounded-b-lg">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-lg font-semibold">24x7 Quick Call Assistance</p>
+                <p className="text-blue-400">+52 800 801 7795</p>
+              </div>
               <Button
                 onClick={handleCall}
-                className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 px-6 rounded-full transition-all duration-200 flex items-center justify-center space-x-3"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full"
               >
-                <span className="text-lg">🇲🇽</span>
-                <span>+52 800 801 7795</span>
+                Call Now
               </Button>
             </div>
-
-
           </div>
         </div>
       </DialogContent>
