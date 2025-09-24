@@ -17,10 +17,6 @@ const ContactPopup = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleCall = () => {
-    window.open('tel:+528008017795', '_self');
-  };
-
   const handleUSACall = () => {
     window.open('tel:+18002670020', '_self');
   };
@@ -78,10 +74,10 @@ const ContactPopup = () => {
             
             {/* Primary Phone Button */}
             <Button
-              onClick={handleUSACall}
+              onClick={handleUKCall}
               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-full text-lg mb-4"
             >
-              +1-800-267-0020
+              +44 808 599 8705
             </Button>
             
             <p className="text-gray-600 font-medium mb-6">24/7 Reservation Support</p>
@@ -106,28 +102,13 @@ const ContactPopup = () => {
             
             {/* Secondary Phone Button */}
             <Button
-              onClick={handleUKCall}
+              onClick={handleUSACall}
               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-full text-lg mb-4"
             >
-              +44 808 599 8705
+              +1-800-267-0020
             </Button>
           </div>
 
-          {/* Bottom Section */}
-          <div className="bg-gray-800 text-white p-4 rounded-b-lg">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-lg font-semibold">24x7 Quick Call Assistance</p>
-                <p className="text-blue-400">+52 800 801 7795</p>
-              </div>
-              <Button
-                onClick={handleCall}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full"
-              >
-                Call Now
-              </Button>
-            </div>
-          </div>
         </div>
       </DialogContent>
     </Dialog>
